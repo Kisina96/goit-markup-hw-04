@@ -5,6 +5,9 @@
   --primary-white-color: #ffffff;
   --primary-iris-color: #4d5ae5;
   --primary-ocean-color: #404bbf;
+  --primary-light-color: #8e8f99;
+  --cloud-color: #f4f4fd;
+  --green-color: #31d0aa;
 
   --primary-text: "Roboto", sans-serif;
   --secondary-text: "Raleway", sans-serif;
@@ -33,6 +36,9 @@ body {
   background-color: #ffffff;
 }
 /* Голова */
+.open {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -66,7 +72,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 40px;
-  box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+
   align-items: center;
 }
 .onelinks:hover {
@@ -75,7 +81,19 @@ body {
 .onelinks:focus {
   color: var(--primary-ocean-color);
 }
-
+.active {
+  color: var(--primary-ocean-color);
+  position: relative;
+}
+.active::after {
+  position: absolute;
+  border-radius: 2px;
+  background-color: var(--primary-ocean-color);
+  width: 48px;
+  height: 4px;
+  content: "";
+  bottom: -1px;
+}
 .contacts {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -106,6 +124,16 @@ body {
   background-color: var(--primary-navy-color);
   padding-top: 188px;
   padding-bottom: 188px;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/dz2/dz4/hero\ image.jpg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .titles {
   font-family: "Roboto", sans-serif;
@@ -229,6 +257,8 @@ body {
   background-color: var(--primary-navy-color);
   padding-top: 100px;
   padding-bottom: 100px;
+  display: flex;
+  align-items: center;
 }
 .increase {
   font-family: "Roboto", sans-serif;
@@ -385,7 +415,8 @@ body {
 }
 .container {
   width: 1158px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -470,4 +501,102 @@ body {
   padding: 32px 16px;
   border: 1px solid var(--border-color-button);
   border-top: none;
+}
+/* section six */
+.section-six {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.customers {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+  color: var(--primary-navy-color);
+}
+.clients-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.clients-item {
+}
+.clients-link {
+  display: flex;
+  width: 168px;
+  height: 88px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--primary-light-color);
+  border-radius: 4px;
+  color: var(--primary-light-color);
+}
+.clients-link:hover {
+  border-color: var(--primary-ocean-color);
+}
+.clients-link:hover .clients-icon {
+  fill: var(--primary-ocean-color);
+}
+.clients-icon {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: fill;
+  margin: 16px 32px;
+  fill: currentColor;
+}
+.icon-pictures {
+  border-radius: 4px;
+  background-color: var(--cloud-color);
+  width: 264px;
+  height: 112px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8pt;
+  display: flex;
+}
+.social-network {
+  display: flex;
+  gap: 24px;
+  margin-top: 8px;
+}
+.social {
+  display: flex;
+  background-color: var(--primary-iris-color);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+.social:hover {
+  background-color: var(--primary-ocean-color);
+}
+.social-to {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  color: var(--primary-white-color);
+  font-family: "Roboto", sans-serif;
+}
+.social-footer {
+  display: flex;
+  flex-direction: column;
+  width: 208px;
+}
+.social-fo {
+  display: flex;
+  background-color: var(--primary-iris-color);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+}
+.social-fo:hover {
+  background-color: var(--green-color);
 }
