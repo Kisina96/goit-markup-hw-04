@@ -616,7 +616,7 @@ body {
   height: 112px;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8pt;
+  margin-bottom: 8px;
   display: flex;
 }
 .social-network {
@@ -637,8 +637,12 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color;
 }
-.social:hover {
+.social:hover,
+.social:focus {
   background-color: var(--primary-ocean-color);
+}
+.network {
+  fill: var(--primary-cloud-color);
 }
 .social-to {
   font-size: 16px;
