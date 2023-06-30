@@ -595,9 +595,13 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color;
+  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.clients-link:hover {
+.clients-link:hover,
+.clients-link:focus {
   border-color: var(--primary-ocean-color);
+  color: var(--primary-ocean-color);
 }
 .clients-link:hover .clients-icon {
   fill: var(--primary-ocean-color);
@@ -621,7 +625,7 @@ body {
 }
 .social-network {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   margin-top: 8px;
   justify-content: center;
 }
@@ -670,7 +674,8 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: background-color;
 }
-.social-fo:hover {
+.social-fo:hover,
+.social-fo:focus {
   background-color: var(--green-color);
 }
 
@@ -679,7 +684,7 @@ body {
 }
 .div-footer {
   display: flex;
-  align-items: center;
+  align-items: baseline;
 }
 .overlay {
   background-color: var(--primary-iris-color);
