@@ -627,12 +627,6 @@ body {
   justify-content: center;
 }
 
-. {
-  display: flex;
-  gap: 16px;
-  margin-top: 8px;
-  justify-content: center;
-}
 .social {
   display: flex;
   background-color: var(--primary-iris-color);
